@@ -1,44 +1,45 @@
 import { web3, Faucet } from '@spherelabs/sdk';
 
 (async () => {
-      const config: any = { 
-            env: 'devnet', 
-            signer: process.env.SOLANA_PRIVATE_KEY || '', 
-            rpcUrl: process.env.SOLANA_RPC_URL || ''
-      }
+	const config: any = {
+		env: 'devnet',
+		signer: process.env.SOLANA_PRIVATE_KEY || '',
+		rpcUrl: process.env.SOLANA_RPC_URL || '',
+	};
 
-      // Create a Faucet
-      const faucet = new Faucet(config);
+	// Create a Faucet
+	const faucet = new Faucet(config);
 
-      // To airdrop SOL to the signer
-      await faucet.airdropSol();
+	// To airdrop SOL to the signer
+	await faucet.airdropSol();
 
-      // Create a new currency (mint), for the faucet.
-      await faucet.initialize();
+	// Create a new currency (mint), for the faucet.
+	await faucet.initialize();
 
-      const currency: web3.PublicKey = faucet.currency
+	const currency: web3.PublicKey = faucet.currency;
 
-      // If a faucet already exists, you may also initialize a faucet from a mint.
-      const derivedFaucet: Faucet = Faucet.fromCurrency(currency.toString(), config)
+	// If a faucet already exists, you may also initialize a faucet from a mint.
+	const derivedFaucet: Faucet = Faucet.fromCurrency(
+		currency.toString(),
+		config
+	);
 
-      // Returns the signer as an AnchorWallet or WalletContextState
-      const wallet = faucet.getSigner();
+	// Returns the signer as an AnchorWallet or WalletContextState
+	const wallet = faucet.getSigner();
 
-      // // Mint 100  tokens to yourself
-      await faucet.mintToSelf(100);
- 
-      // // Mint 100 tokens to a pubkey
-      const receiver: web3.PublicKey = web3.Keypair.generate().publicKey
-      await faucet.mintTo(receiver, 100);
+	// // Mint 100  tokens to yourself
+	await faucet.mintToSelf(100);
 
-      // Retrieve the currency's decimals
-      const decimals: number = faucet.decimals;
+	// // Mint 100 tokens to a pubkey
+	const receiver: web3.PublicKey = web3.Keypair.generate().publicKey;
+	await faucet.mintTo(receiver, 100);
 
-      // // Retrieve the faucet signer's token account
-      const signerAccountInfo = faucet.signerTokenAccountInfo;
+	// Retrieve the currency's decimals
+	const decimals: number = faucet.decimals;
 
-      // // Get or create associated token account info for a pubkey
-      const accountInfo = faucet.getOrCreateAssociatedAccountInfo(
-            receiver
-      );
+	// // Retrieve the faucet signer's token account
+	const signerAccountInfo = faucet.signerTokenAccountInfo;
+
+	// // Get or create associated token account info for a pubkey
+	const accountInfo = faucet.getOrCreateAssociatedAccountInfo(receiver);
 })();

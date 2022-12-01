@@ -1,17 +1,17 @@
 {
-    "compilerOptions": {
-          "module": "commonjs",
-          "target": "ES2019",
-          "noImplicitAny": true,
-          "declaration": true,
-          "removeComments": true,
-          "preserveConstEnums": true,
-          "esModuleInterop": true,
-          "downlevelIteration": true,
-          "sourceMap": false,
-          "outDir": "lib",
-          "lib": ["es2019", "dom"]
-    },
-    "include": ["src"],
-    "exclude": ["node_modules", "tests", "examples"]
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "ES2019",
+		"noImplicitAny": true,
+		"declaration": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"esModuleInterop": true,
+		"downlevelIteration": true,
+		"sourceMap": false,
+		"outDir": "lib",
+		"lib": ["es2019", "dom"]
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "tests", "examples"]
 }

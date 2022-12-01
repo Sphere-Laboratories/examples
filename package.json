@@ -1,0 +1,25 @@
+{
+	"name": "examples",
+	"version": "1.0.0",
+	"description": "Sphere SDK Examples",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "husky install",
+		"lint:fix": "yarn run lint-ts:fix",
+		"lint-ts:fix": "npx prettier --write ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Sphere-Laboratories/examples.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Sphere-Laboratories/examples/issues"
+	},
+	"homepage": "https://github.com/Sphere-Laboratories/examples#readme",
+	"devDependencies": {
+		"husky": "^8.0.2"
+	}
+}
