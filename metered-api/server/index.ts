@@ -1,4 +1,4 @@
-import { Sphere, Price, Product, Subscription, logger } from '@spherelabs/sdk';
+import { Sphere, Price, Product, Subscription } from '@spherelabs/sdk';
 import http from 'http';
 import bodyParser from 'body-parser';
 import express from 'express';
@@ -45,6 +45,7 @@ app.post('/', async (req: express.Request, res: express.Response) => {
 			res.status(200).json({});
 			return;
 		}
+		console.log(`Processing upcoming billing event with hash: ${hash}`);
 		const eventData: UpcomingBillingEventData = req.body;
 		subscription = eventData.data.subscription;
 		unitsUsed = await getUnitsUsedForPeriod(subscription);
