@@ -15,7 +15,7 @@
 
 This repository contains example usecases of the Sphere Typescript SDK.
 
-The technical documentation for this SDK can be found [here](https://docs.sphere.engineer/docs/gettingstarted_introduction)
+The technical documentation for this SDK can be found [here](https://docs.sphere.engineer/docs/gettingstarted_introduction).
 
 # Examples
 
