@@ -16,6 +16,7 @@ import { web3, Faucet } from '@spherelabs/sdk';
 	// Create a new currency (mint), for the faucet.
 	await faucet.initialize();
 
+	// The newly 
 	const currency: web3.PublicKey = faucet.currency;
 
 	// If a faucet already exists, you may also initialize a faucet from a mint.

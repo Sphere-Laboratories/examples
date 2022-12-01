@@ -1,7 +1,7 @@
 import { Sphere, Invoice, Faucet } from '@spherelabs/sdk';
 
 (async () => {
-	// Instantiate a Sphere client
+	// Instantiate a Sphere Client (signer=merchant)
 	const sphere = new Sphere({
 		env: 'devnet',
 		apiKey: process.env.SPHERE_API_KEY || '',
@@ -9,7 +9,7 @@ import { Sphere, Invoice, Faucet } from '@spherelabs/sdk';
 		rpcUrl: process.env.SOLANA_RPC_URL || '',
 	});
 
-	// Faucet setup
+	// Create a Devnet Current and Token Faucet
 	const faucet = new Faucet({
 		env: 'devnet',
 		signer: process.env.SOLANA_PRIVATE_KEY || '',
@@ -18,7 +18,7 @@ import { Sphere, Invoice, Faucet } from '@spherelabs/sdk';
 	await faucet.initialize();
 	const currency = faucet.currency;
 
-	// Merchant creates an invoice
+	// Create an Invoice.
 	var invoice: Invoice = await sphere.invoice.create({
 		name: 'Your first invoice.',
 		description: `An invoice is a document given to the buyer by the seller
