@@ -14,7 +14,6 @@
 import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 
 (async () => {
-
 	// Instantiate a Sphere client
 	const sphere: Sphere = new Sphere({
 		env: 'devnet',
@@ -26,7 +25,7 @@ import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 	const faucet = new Faucet({
 		env: 'devnet',
 		signer: process.env.SOLANA_PRIVATE_KEY || '',
-            rpcUrl: process.env.SOLANA_RPC_URL || ''
+		rpcUrl: process.env.SOLANA_RPC_URL || '',
 	});
 	await faucet.airdropSol();
 	await faucet.initialize();
