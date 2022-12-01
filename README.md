@@ -13,27 +13,17 @@
 
 # Sphere Protocol
 
-This repository contains example usecases of the Sphere Typescript SDK.
+This repository contains example usecases of the [**Sphere SDK**](https://docs.sphere.engineer/docs/gettingstarted_introduction).
 
-The technical documentation for this SDK can be found [here](https://docs.sphere.engineer/docs/gettingstarted_introduction).
+## Examples
 
-# Examples
+- [**Faucet**](https://github.com/Sphere-Laboratories/examples/tree/main/faucet) – Initialize and use a token faucet to help you build on devnet and speed up development.
 
-### I. Faucet
+- [**Invoice**](https://github.com/Sphere-Laboratories/examples/tree/main/invoice) – Create create and send an invoice to your customer.
+- [**Membership(Coming Soon)**](https://github.com/Sphere-Laboratories/examples/tree/main/membership) – Create a recurring subscription based product for membership to a group or organization.
+- [**Metered API**](https://github.com/Sphere-Laboratories/examples/tree/main/metered-api) – Create a recurring subscription based product for a metered API service.
 
-Initialize and use a token faucet to help you build on devnet and speed up development.
 
-### II. Invoice
-
-Create create and send an invoice to your customer.
-
-### III. Membership (Coming Soon)
-
-Create a recurring subscription based product for membership to a group or organization.
-
-### IV. Metered-API
-
-Create a recurring subscription based product for a metered API service.
 
 ## License
 
