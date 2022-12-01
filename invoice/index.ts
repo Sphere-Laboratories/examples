@@ -9,7 +9,7 @@ import { Sphere, Invoice, Faucet } from '@spherelabs/sdk';
 		rpcUrl: process.env.SOLANA_RPC_URL || '',
 	});
 
-	// Create a Devnet Current and Token Faucet
+	// Create a Devnet Currency and Token Faucet
 	const faucet = new Faucet({
 		env: 'devnet',
 		signer: process.env.SOLANA_PRIVATE_KEY || '',

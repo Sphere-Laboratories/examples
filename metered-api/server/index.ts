@@ -11,7 +11,7 @@ const sphere: Sphere = new Sphere({
 
 // Retrieves the billable units for the current period for a subscription.
 const getUnitsUsedForPeriod = async (
-	_subscription: Subscription
+	subscription: Subscription
 ): Promise<number> => 10_000;
 
 // Webhook event data types
