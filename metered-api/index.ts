@@ -10,7 +10,7 @@ import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 	});
 
 	// Register Webhook API
-	await sphere.registerAPI('https://your-api-url.com');
+	await sphere.registerAPI('http://localhost:8080');
 
 	// Create a currency and airdrop SOL to the merchant
 	const faucet = new Faucet({
