@@ -9,13 +9,12 @@ const sphere: Sphere = new Sphere({
 	apiKey: process.env.SPHERE_API_KEY || '',
 });
 
-// A function that takes in a subscription id and returns the number of
-// units that the user has used for the current billing period.
+// Retrieves the billable units for the current period for a subscription.
 const getUnitsUsedForPeriod = async (
 	_subscription: Subscription
 ): Promise<number> => 10_000;
 
-// Webhook Event Data types
+// Webhook event data types
 type UpcomingBillingEventData = {
 	topic: string;
 	data: {
@@ -59,7 +58,7 @@ app.post('/', async (req: express.Request, res: express.Response) => {
 	}
 });
 
-// Listen on port 5000
-server.listen(5000, () =>
-	console.log(`Saas::billing::units:updater started on port: 5000`)
+// Start server on port :8080
+server.listen(8080, () =>
+	console.log(`metered-api::service::units:updater started on port: 8080`)
 );
