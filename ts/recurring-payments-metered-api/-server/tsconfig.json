@@ -1,0 +1,20 @@
+{
+    "exclude": ["node_modules", "./tests/**/*.ts"],
+    "compilerOptions": {
+          "module": "commonjs",
+          "noImplicitAny": false,
+          "removeComments": true,
+          "preserveConstEnums": true,
+          "esModuleInterop": true,
+          "downlevelIteration": false,
+          "sourceMap": true,
+          "outDir": "build",
+          "lib": ["es2019", "dom"],
+          "strict": false,
+          "experimentalDecorators": true,
+          "skipDefaultLibCheck": true,
+          "types": [],
+          "emitDecoratorMetadata": true,
+          "resolveJsonModule": true
+    }
+}
