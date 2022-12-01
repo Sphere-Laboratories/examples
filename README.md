@@ -19,7 +19,7 @@ The technical documentation for this SDK can be found [here](https://docs.sphere
 
 # Examples
 
-### I. Faucet 
+### I. Faucet
 
 Initialize and use a token faucet to help you build on devnet and speed up development.
 
@@ -31,7 +31,7 @@ Create create and send an invoice to your customer.
 
 Create a recurring subscription based product for membership to a group or organization.
 
-### IV. Metered-API 
+### IV. Metered-API
 
 Create a recurring subscription based product for a metered API service.
 
