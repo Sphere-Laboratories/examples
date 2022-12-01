@@ -1,14 +1,14 @@
 import { Sphere, Price, Product, Subscription, logger } from '@spherelabs/sdk';
 import http from 'http';
-import bodyParser from "body-parser"
+import bodyParser from 'body-parser';
 import express from 'express';
 
 // Initialize Sphere Client
 const sphere: Sphere = new Sphere({
 	env: 'devnet',
 	apiKey: process.env.SPHERE_API_KEY || '',
-    signer: process.env.SOLANA_PRIVATE_KEY || '',
-    rpcUrl: process.env.SOLANA_RPC_URL || ''
+	signer: process.env.SOLANA_PRIVATE_KEY || '',
+	rpcUrl: process.env.SOLANA_RPC_URL || '',
 });
 
 // Retrieve the billable units for the current period for a subscription.
@@ -31,16 +31,16 @@ type UpcomingBillingEventData = {
 // Create an express app
 const app: express.Express = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json())
+app.use(express.json());
 
-// Create a single post endpoint 
+// Create a single post endpoint
 app.post('/', async (req: express.Request, res: express.Response) => {
 	var subscription: Subscription;
 	var unitsUsed: number;
 	try {
 		const hash: string = req.body.hash;
 		const topic: string = req.body.topic;
-		console.log(`Injested event with topic: ${topic} and hash: ${hash}`)
+		console.log(`Injested event with topic: ${topic} and hash: ${hash}`);
 		if (topic != 'sphere.events.subscription.upcoming_billing') {
 			res.status(200).json({});
 			return;
@@ -64,7 +64,7 @@ app.post('/', async (req: express.Request, res: express.Response) => {
 	}
 });
 
-// Create and start server 
+// Create and start server
 const server = http.createServer(app);
 server.listen(8080, () =>
 	console.log(`metered-api::server started on port: 8080`)
