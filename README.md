@@ -23,8 +23,6 @@ This repository contains example usecases of the [**Sphere SDK**](https://docs.s
 - [**Membership(Coming Soon)**](https://github.com/Sphere-Laboratories/examples/tree/main/membership) – Create a recurring subscription based product for membership to a group or organization.
 - [**Metered API**](https://github.com/Sphere-Laboratories/examples/tree/main/metered-api) – Create a recurring subscription based product for a metered API service.
 
-
-
 ## License
 
 Sphere Protocol is licensed under [MIT LICENSE](./LICENSE).
