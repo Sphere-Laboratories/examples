@@ -1,3 +1,5 @@
+// TODO: Coming Soon
+
 // ## I. Flat Membership Subscriptions
 
 // Suppose your company offers a service that you would like to charge a monthly flat subscription on. For example, higher request limits for your API, a paid tier for premium analytics and services, or even access to a private Discord channel.
@@ -9,24 +11,22 @@
 
 // Additionally, you'd like to give your users a 7 day trial period.
 
-import { Sphere, Price, Product, Faucet } from '../../lib';
+import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 
 (async () => {
-	// environment variables
-	const signer: string = process.env.SOLANA_PRIVATE_KEY || '';
-	const apiKey: string = process.env.SPHERE_API_KEY || '';
 
 	// Instantiate a Sphere client
 	const sphere: Sphere = new Sphere({
 		env: 'devnet',
-		signer,
-		apiKey,
+		signer: process.env.SOLANA_PRIVATE_KEY || '',
+		apiKey: process.env.SPHERE_API_KEY || '',
 	});
 
 	// Create a currency and airdrop SOL to the merchant
 	const faucet = new Faucet({
 		env: 'devnet',
-		signer,
+		signer: process.env.SOLANA_PRIVATE_KEY || '',
+            rpcUrl: process.env.SOLANA_RPC_URL || ''
 	});
 	await faucet.airdropSol();
 	await faucet.initialize();

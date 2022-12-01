@@ -2,7 +2,7 @@ import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 
 (async () => {
 	// Instantiate a Sphere client
-	const sphere: Sphere = new Sphere({
+	const sphere = new Sphere({
 		env: 'devnet',
 		apiKey: process.env.SPHERE_API_KEY || '',
 		signer: process.env.SOLANA_PRIVATE_KEY || '',
