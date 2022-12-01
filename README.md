@@ -13,43 +13,27 @@
 
 # Sphere Protocol
 
-This repository 
-
-# Documentation
+This repository contains example usecases of the Sphere Typescript SDK.
 
 The technical documentation for this SDK can be found [here](https://docs.sphere.engineer/docs/gettingstarted_introduction)
 
-## Installation
+# Examples
 
-```
-npm i @spherelabs/sdk
-```
+### I. Faucet 
 
-## Payment Primitives
+Initialize and use a token faucet to help you build on devnet and speed up development.
 
-### Prices
+### II. Invoice
 
-Prices allow you to set prices for your products.
+Create create and send an invoice to your customer.
 
-### Products
+### III. Membership (Coming Soon)
 
-Products allow you to define a good or services with some of your prices.
+Create a recurring subscription based product for membership to a group or organization.
 
-### Invoices
+### IV. Metered-API 
 
-Invoices allow you to facilitate one-time payments between two parties.
-
-### Payments (Coming soon)
-
-Payments allow you to accept one-time payments from your customers for your products.
-
-### Subscriptions
-
-Subscriptions allow you to accept recurring payments from your customers for your products.
-
-### Payouts (Coming soon)
-
-Payouts allows you to schedule reocurring payouts to parties.
+Create a recurring subscription based product for a metered API service.
 
 ## License
 
