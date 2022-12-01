@@ -16,10 +16,10 @@ import { web3, Faucet } from '@spherelabs/sdk';
 	// Create a new currency (mint), for the faucet.
 	await faucet.initialize();
 
-	// The newly
+	// The mint address of the newly created currency.
 	const currency: web3.PublicKey = faucet.currency;
 
-	// If a faucet already exists, you may also initialize a faucet from a mint.
+	// If a faucet for the currency already exists, you may also initialize it with.
 	const derivedFaucet: Faucet = Faucet.fromCurrency(
 		currency.toString(),
 		config
@@ -28,7 +28,7 @@ import { web3, Faucet } from '@spherelabs/sdk';
 	// Returns the signer as an AnchorWallet or WalletContextState
 	const wallet = faucet.getSigner();
 
-	// // Mint 100  tokens to yourself
+	// // Mint 100 tokens to yourself
 	await faucet.mintToSelf(100);
 
 	// // Mint 100 tokens to a pubkey
