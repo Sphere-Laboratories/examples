@@ -24,6 +24,9 @@ describe('🍬 Examples Should Execute Successfully', () => {
 
 	it('recurringPaymentsMeteredAPI', async () => {
 		await recurringPaymentsMeteredAPI();
-		expect(true).to.eql(true, 'recurringPaymentsMeteredAPI Did not execute successfully');
+		expect(true).to.eql(
+			true,
+			'recurringPaymentsMeteredAPI Did not execute successfully'
+		);
 	});
 });
