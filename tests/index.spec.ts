@@ -19,9 +19,11 @@ describe('🍬 Examples Should Execute Successfully', () => {
 
 	it('Malicious User sends us not fulfilled session. We should reject all statuses but "fulfillment_complete"', async () => {
 		await recurringPaymentsMembership();
+		expect(true).to.eql(true, 'Did not execute successfully');
 	});
 
 	it('Malicious user attempts to send  to use twice', async () => {
 		await recurringPaymentsMeteredAPI();
+		expect(true).to.eql(true, 'Did not execute successfully');
 	});
 });
