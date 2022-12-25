@@ -1,6 +1,6 @@
 import { web3, Faucet } from '@spherelabs/sdk';
 
-(async () => {
+export const createFaucet = async () => {
 	const config: any = {
 		env: 'devnet',
 		signer: process.env.SOLANA_PRIVATE_KEY || '',
@@ -43,4 +43,5 @@ import { web3, Faucet } from '@spherelabs/sdk';
 
 	// // Get or create associated token account info for a pubkey
 	const accountInfo = faucet.getOrCreateAssociatedAccountInfo(receiver);
-})();
+}
+

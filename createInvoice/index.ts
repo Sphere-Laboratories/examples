@@ -1,6 +1,6 @@
 import { Sphere, Invoice, Faucet } from '@spherelabs/sdk';
 
-(async () => {
+export const createInvoice = async () => {
 	// Instantiate a Sphere Client (signer=merchant)
 	const sphere = new Sphere({
 		env: 'devnet',
@@ -35,4 +35,4 @@ import { Sphere, Invoice, Faucet } from '@spherelabs/sdk';
 
 	// Console log the url for the Sphere hosted ui for the invoice.
 	console.log(invoice.url);
-})();
+}

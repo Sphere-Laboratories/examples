@@ -1,6 +1,6 @@
 import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 
-(async () => {
+export const recurringPaymentsMeteredAPI = async () => {
 	// Instantiate a Sphere client
 	const sphere = new Sphere({
 		env: 'devnet',
@@ -139,4 +139,4 @@ import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 
 	// Console log the subscription checkout page for your product
 	console.log(product.url);
-})();
+};

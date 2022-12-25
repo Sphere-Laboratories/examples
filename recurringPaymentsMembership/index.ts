@@ -13,7 +13,7 @@
 
 import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 
-(async () => {
+export const recurringPaymentsMembership = async () => {
 	// Instantiate a Sphere client
 	const sphere: Sphere = new Sphere({
 		env: 'devnet',
@@ -92,4 +92,4 @@ import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
 
 	// Log the product page
 	console.log(product.url);
-})();
+}
