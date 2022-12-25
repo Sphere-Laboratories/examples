@@ -35,4 +35,4 @@ export const createInvoice = async () => {
 
 	// Console log the url for the Sphere hosted ui for the invoice.
 	console.log(invoice.url);
-}
+};

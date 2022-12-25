@@ -92,4 +92,4 @@ export const recurringPaymentsMembership = async () => {
 
 	// Log the product page
 	console.log(product.url);
-}
+};

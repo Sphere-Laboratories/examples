@@ -43,5 +43,4 @@ export const createFaucet = async () => {
 
 	// // Get or create associated token account info for a pubkey
 	const accountInfo = faucet.getOrCreateAssociatedAccountInfo(receiver);
-}
-
+};
