@@ -17,7 +17,7 @@ This repository contains example usecases of the [**Sphere SDK**](https://docs.s
 
 ## Examples
 
-- [**Faucet**](https://github.com/Sphere-Laboratories/examples/tree/main/faucet) – Initialize and use a token faucet to help you build on devnet and speed up development.
+- [**Faucet**](https://github.com/Sphere-Laboratories/examples/tree/main/createFaucet) – Initialize and use a token faucet to help you build on devnet and speed up development.
 
 - [**Invoice**](https://github.com/Sphere-Laboratories/examples/tree/main/invoice) – Create and send an invoice to your customer.
 - [**Membership (Coming Soon)**](https://github.com/Sphere-Laboratories/examples/tree/main/membership) – Create a recurring subscription based product for membership to a group or organization.
