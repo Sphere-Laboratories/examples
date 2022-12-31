@@ -1,4 +1,4 @@
-import { Sphere, Invoice, Faucet } from '@spherelabs/sdk';
+import { Sphere, Invoice, Price } from '@spherelabs/sdk';
 
 export const createInvoiceWithPrice = async () => {
 	// Instantiate a Sphere Client (signer=merchant)

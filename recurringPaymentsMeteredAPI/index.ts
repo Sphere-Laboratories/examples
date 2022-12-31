@@ -1,4 +1,4 @@
-import { Sphere, Price, Product, Faucet } from '@spherelabs/sdk';
+import { Sphere, Price, Product } from '@spherelabs/sdk';
 
 export const recurringPaymentsMeteredAPI = async () => {
 	// Instantiate a Sphere client
