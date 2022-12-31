@@ -32,6 +32,6 @@
 		"ts-mocha": "^10.0.0"
 	},
 	"dependencies": {
-		"@spherelabs/sdk": "^0.1.9"
+		"@spherelabs/sdk": "0.2.0-alpha"
 	}
 }

@@ -217,7 +217,24 @@
     rpc-websockets "^7.5.0"
     superstruct "^0.14.2"
 
-"@spherelabs/sdk@^0.1.4", "@spherelabs/sdk@^0.1.9":
+"@spherelabs/sdk@0.2.0-alpha":
+  version "0.2.0-alpha"
+  resolved "https://registry.yarnpkg.com/@spherelabs/sdk/-/sdk-0.2.0-alpha.tgz#46bf0266109147a51106780dba58642b9723c94e"
+  integrity sha512-sF4iMwzaYjvTABfIj5cB1eLahNbQCXhb3DyjTbIPXT50dpS9l2wqPpjJFHDPb1hYoV4cxZaxuYturbRaOZp1SQ==
+  dependencies:
+    "@project-serum/anchor" "^0.24.2"
+    "@solana/spl-token" "^0.1.8"
+    "@solana/spl-token-registry" "^0.2.4574"
+    "@solana/wallet-adapter-react" "^0.15.24"
+    "@solana/web3.js" "^1.42.0"
+    "@spherelabs/sdk" "^0.1.4"
+    axios "^1.1.3"
+    dotenv "^16.0.3"
+    express "^4.18.2"
+    object-hash "^3.0.0"
+    typedoc "^0.23.19"
+
+"@spherelabs/sdk@^0.1.4":
   version "0.1.9"
   resolved "https://registry.yarnpkg.com/@spherelabs/sdk/-/sdk-0.1.9.tgz#1c5b6f641d2517f6054783493ec7f96c30736c52"
   integrity sha512-csX7qLeCnDHLvTASJkZkHC350c9Q2NhvVVSreMchShqENakLzVC2brZiIrZEDj4o4Ya1IL4S2v1mJ2Umus7ZjQ==

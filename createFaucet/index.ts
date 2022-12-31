@@ -1,46 +1,36 @@
-import { web3, Faucet } from '@spherelabs/sdk';
+import { web3, Sphere, Env } from '@spherelabs/sdk';
 
 export const createFaucet = async () => {
-	const config: any = {
-		env: 'devnet',
-		signer: process.env.SOLANA_PRIVATE_KEY || '',
-		rpcUrl: process.env.SOLANA_RPC_URL || '',
-	};
+      const sphere = new Sphere({
+            env: (process.env.ENV as Env) || 'devnet',
+            apiKey: process.env.SPHERE_API_KEY || '',
+            signer: process.env.SOLANA_PRIVATE_KEY || '',
+            rpcUrl: process.env.SOLANA_RPC_URL || '',
+      });
 
-	// Create a Faucet
-	const faucet = new Faucet(config);
+      // To airdrop SOL to the signer
+      await sphere.faucet.airdropSol();
 
-	// To airdrop SOL to the signer
-	await faucet.airdropSol();
+      // Create a new currency (mint), for the faucet.
+      await sphere.faucet.initialize();
 
-	// Create a new currency (mint), for the faucet.
-	await faucet.initialize();
+      // The mint address of the newly created currency.
+      const currency: web3.PublicKey = sphere.faucet.currency;
 
-	// The mint address of the newly created currency.
-	const currency: web3.PublicKey = faucet.currency;
+      // Returns the signer as an AnchorWallet or WalletContextState
+      const signer = sphere.web3.auth();
 
-	// If a faucet for the currency already exists, you may also initialize it with.
-	const derivedFaucet: Faucet = Faucet.fromCurrency(
-		currency.toString(),
-		config
-	);
+      // // Mint 100 tokens to yourself
+      await sphere.faucet.mintToSelf(100);
 
-	// Returns the signer as an AnchorWallet or WalletContextState
-	const wallet = faucet.getSigner();
+      // // Mint 100 tokens to a pubkey
+      const receiver: web3.PublicKey = web3.Keypair.generate().publicKey;
+      await sphere.faucet.mintTo(receiver, 100);
 
-	// // Mint 100 tokens to yourself
-	await faucet.mintToSelf(100);
+      // // Retrieve the faucet signer's token account
+      const signerAccountInfo = sphere.web3.faucet.signerTokenAccountInfo;
 
-	// // Mint 100 tokens to a pubkey
-	const receiver: web3.PublicKey = web3.Keypair.generate().publicKey;
-	await faucet.mintTo(receiver, 100);
-
-	// Retrieve the currency's decimals
-	const decimals: number = faucet.decimals;
-
-	// // Retrieve the faucet signer's token account
-	const signerAccountInfo = faucet.signerTokenAccountInfo;
-
-	// // Get or create associated token account info for a pubkey
-	const accountInfo = faucet.getOrCreateAssociatedAccountInfo(receiver);
+      // // Get or create associated token account info for a pubkey
+      const accountInfo =
+            sphere.web3.faucet.getOrCreateAssociatedAccountInfo(receiver);
 };

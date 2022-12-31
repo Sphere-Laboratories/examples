@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { createFaucet } from '../createFaucet';
-import { createInvoice } from '../createInvoice';
+import { createInvoiceWithPrice } from '../createInvoice';
 import { recurringPaymentsMembership } from '../recurringPaymentsMembership';
 import { recurringPaymentsMeteredAPI } from '../recurringPaymentsMeteredAPI';
 
@@ -12,9 +12,9 @@ describe('🍬 Examples Should Execute Successfully', () => {
 		expect(true).to.eql(true, 'createFaucet Did not execute successfully');
 	});
 
-	it('✨ createInvoice', async () => {
-		await createInvoice();
-		expect(true).to.eql(true, 'createInvoice Did not execute successfully');
+	it('✨ createInvoiceWithPrice', async () => {
+		await createInvoiceWithPrice();
+		expect(true).to.eql(true, 'createInvoiceWithPrice Did not execute successfully');
 	});
 
 	// it('recurringPaymentsMembership', async () => {
