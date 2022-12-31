@@ -14,7 +14,10 @@ describe('🍬 Examples Should Execute Successfully', () => {
 
 	it('✨ createInvoiceWithPrice', async () => {
 		await createInvoiceWithPrice();
-		expect(true).to.eql(true, 'createInvoiceWithPrice Did not execute successfully');
+		expect(true).to.eql(
+			true,
+			'createInvoiceWithPrice Did not execute successfully'
+		);
 	});
 
 	// it('recurringPaymentsMembership', async () => {
